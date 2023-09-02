@@ -1,0 +1,151 @@
+@import url("https://fonts.cdnfonts.com/css/troubleside");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background: rgb(142, 191, 255);
+  font-family: "TroubleSide", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+header {
+  color: rgb(8, 74, 227);
+  margin: 3.33rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  margin-top: 2rem;
+  color: yellow;
+  display: flex;
+  align-items: center;
+}
+.toggle__btn {
+  margin: 0 1rem;
+}
+
+.checkbox {
+  display: none;
+}
+.checkbox:checked + .sub {
+  justify-content: flex-end;
+}
+
+.sub {
+  background: linear-gradient(135deg, rgb(123, 169, 234) 0%, rgb(8, 74, 227) 100%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 3.3rem;
+  border-radius: 1.6rem;
+  padding: 0.3rem;
+}
+
+.circle {
+  background-color: #fff;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  color: black;
+  border-radius: 0.8rem;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  background: linear-gradient(135deg, rgb(240, 243, 150) 0%, rgb(232, 232, 10) 100%);
+  color: black;
+  display: flex;
+  align-items: center;
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+ul {
+  margin: 2.6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+}
+
+.currency {
+  font-size: 2rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.price__duration {
+  padding-bottom: 2rem;
+}
+
+.btn {
+  font-family: "TroubleSide", sans-serif;
+  margin-top: 1rem;
+  height: 2.6rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: rgb(8, 74, 227);
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+}
+.btn:hover {
+  background: linear-gradient(135deg, rgb(123, 169, 234) 0%, rgb(8, 74, 227) 100%);
+}
+
+.package {
+  font-size: 1.1rem;
+  color: rgb(8, 74, 227);
+}
+.package__bar {
+  font-size: 1rem;
+}
+
+.uil-check-circle {
+  color: green;
+}
+
+.uil-times-circle {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

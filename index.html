@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Comparison Table</title>
+  <link rel="icon" type="image-favicon" href="./icons8-favicon-64.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+  <header>
+    <h1>Choose your plan</h1>
+    <div class="toggle">
+      <label for="">Monthly</label>
+      <div class="toggle__btn">
+        <input type="checkbox" id="checkbox" class="checkbox">
+        <label for="checkbox" class="sub" id="suv">
+          <div class="circle"></div>
+        </label>
+      </div>
+      <label for="">Yearly</label>
+    </div>
+  </header>
+  <section>
+    <div class="cards">
+      <div class="card">
+        <ul>
+          <li class="package">Basic</li>
+          <div>
+            <span class="currency">$</span>
+            <span id="basic" class="price">15</span>
+          </div>
+          <li class="price__duration">/month</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i>&nbsp;1 User per account&nbsp;&nbsp;</li>
+          <li class="package__bar"><i class="uil uil-times-circle"></i>&nbsp;Unlimited event</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;Registration form</li>
+          <li class="package__bar"><i class="uil uil-times-circle"></i>&nbsp;Support 24/7</li>
+          <li>
+            <button class="btn">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul>
+          <li class="package">Standard</li>
+          <div>
+            <span class="currency">$</span>
+            <span id="basic" class="price">25</span>
+          </div>
+          <li class="price__duration">/month</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;3 Users per account</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;Unlimited event</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;Registration form</li>
+          <li class="package__bar"><i class="uil uil-times-circle"></i>&nbsp;Support 24/7</li>
+          <li>
+            <button class="btn">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul>
+          <li class="package">Premium</li>
+          <div>
+            <span class="currency">$</span>
+            <span id="basic" class="price">50</span>
+          </div>
+          <li class="price__duration">/month</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;7 Users per account</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;Unlimited event</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;Registration form</li>
+          <li class="package__bar"><i class="uil uil-check-circle"></i></i>&nbsp;Support 24/7</li>
+          <li>
+            <button class="btn">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script>
+    let checkbox = document.querySelector('#checkbox');
+    let duration = document.querySelectorAll('.price__duration');
+    let price = document.querySelectorAll('.price');
+
+    checkbox.addEventListener('change', function () {
+      if (this.checked) {
+        for (let i = 0; i < duration.length; i++) {
+          duration[i].innerText = '/year';
+        }
+        for (let j = 0; j < price.length; j++) {
+          price[j].innerText = price[j].innerText * 10;
+        }
+      } else {
+        for (let i = 0; i < duration.length; i++) {
+          duration[i].innerText = '/month';
+        }
+        for (let j = 0; j < price.length; j++) {
+          price[j].innerText = price[j].innerText / 10;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
